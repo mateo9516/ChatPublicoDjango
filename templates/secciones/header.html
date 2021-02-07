@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="d-flex p-3 px-md-4 bg-white border-bottom shadow-sm">
+  <div class="d-none d-md-flex flex-row my-auto flex-grow-1 align-items-center">
+    <h5 class="mr-3 font-weight-normal justify-content-start">Chat Publico</h5>
+
+    <div class="d-flex flex-row-reverse flex-grow-1">
+      <nav>
+        {% if request.user.is_authenticated %}
+        <img class="account-image rounded-circle m-auto d-block" id="id_profile_pic" src="{{request.user.imagen.url}}" width="40" height="40">
+        <a class="p-2 text-dark" href="{% url 'logout' %}">Salir</a>
+        {% else %}
+          <a class="p-2 text-dark" href="{% url 'login' %}">Ingresar</a>
+          <a class="p-2 text-dark" href="{% url 'registro' %}">Registrarse</a>
+        {% endif %}
+      </nav>
+    </div>
+
+  </div>
+</div>  
