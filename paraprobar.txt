@@ -1,0 +1,3 @@
+usuer = user2 
+email = usuario2@gmail.com 
+contraseña = contrados

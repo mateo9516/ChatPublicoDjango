@@ -34,7 +34,8 @@ urlpatterns = [
     path('registro/', registro_view, name="registro"),
     path('login/', login_view, name="login"),
     path('logout/', logout_view, name="logout"),
-    path('chat/',principal_view,name="principal")
+    path('chat/',principal_view,name="principal"),
+    path('/', login_view,name="login")
 ]
 if settings.DEBUG:
 	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
